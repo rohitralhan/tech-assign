@@ -63,7 +63,6 @@ public class SolverService {
 
             solver.addEventListener(event -> {
                 if (event.isEveryProblemChangeProcessed() && event.getNewBestScore().isSolutionInitialized()) {
-                    pinCallAssignedToAgents(event.getNewBestSolution().getJobs());
                     bestSolutionChangedEventConsumer.accept(event);
                 }
             });
